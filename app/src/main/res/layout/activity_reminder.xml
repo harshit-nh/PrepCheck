@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ReminderActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/status_bar_color3"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:titleTextAppearance="@style/ToolbarTitleStyle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:layout_marginTop="30dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Set Reminder"
+                android:textStyle="bold"
+                android:textSize="35sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/dateTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/txtTitle"
+                android:layout_centerHorizontal="true"
+                android:text="Select Date:"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"/>
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dateEditTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="dd/mm/yy"
+                android:textColor="@color/black"
+                android:inputType="date"
+                android:textSize="22sp"
+                android:textColorHint="#636387"
+                android:background="@drawable/border_two"
+                android:layout_below="@+id/dateTxt"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/timeTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dateEditTxt"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="Select Time:"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/timeEditTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="-- : --"
+                android:textColor="@color/black"
+                android:inputType="time"
+                android:textSize="22sp"
+                android:textColorHint="#636387"
+                android:background="@drawable/border_two"
+                android:layout_below="@+id/timeTxt"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/confirmBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/button_bg"
+                android:text="Confirm"
+                android:fontFamily="sans-serif"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:layout_below="@id/timeEditTxt"/>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/confirmBtn"
+                android:text="Confirmation"
+                android:textStyle="bold"
+                android:textSize="35sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"/>
+
+
+                <LinearLayout
+                    android:id="@+id/layoutConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtConfirm"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/card_bg"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/confirmDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Date: "
+                            android:textStyle="bold"
+                            android:textSize="25sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="sans-serif"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/confirmDate1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Selected Date"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="sans-serif"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/confirmTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Time: "
+                            android:textStyle="bold"
+                            android:textSize="25sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="sans-serif"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/confirmTime1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Selected Time"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="sans-serif"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="55dp"
+                android:layout_below="@id/layoutConfirm"
+                android:textAlignment="center"
+                android:text="A reminder notification will be sent at the specified time and date."
+                android:textSize="20sp"
+                android:textColor="#636387"
+                android:fontFamily="sans-serif-medium"/>
+
+
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
